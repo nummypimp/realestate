@@ -1,0 +1,33 @@
+[
+  {
+    "id": "p001",
+    "title": "บ้านเดี่ยว 2 ชั้น ลาดพร้าว",
+    "price": 5900000,
+    "location": "ลาดพร้าว, กรุงเทพฯ",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": 50,
+    "images": [
+      "/images/house1.jpg",
+      "/images/house2.jpg",
+      "/images/house3.jpg"
+    ],
+    "for": "sale" ,
+    "description": "บ้านพร้อมเข้าอยู่ โครงสร้างแข็งแรง เดินทางสะดวก ใกล้ BTS เหมาะสำหรับอยู่อาศัยหรือปล่อยเช่า"
+  },
+  {
+    "id": "p002",
+    "title": "คอนโดหรูใจกลางเมือง",
+    "price": 3200000,
+    "location": "อโศก, กรุงเทพฯ",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "area": 30,
+    "images": [
+      "/images/condo1.jpg",
+      "/images/condo2.jpg"
+    ],
+    "for": "sale" ,
+    "description": "คอนโดใกล้รถไฟฟ้า พร้อมสิ่งอำนวยความสะดวกครบครัน"
+  }
+]
