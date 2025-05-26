@@ -1,0 +1,16 @@
+# Node.js
+backend/node_modules/
+real-estate-landing-react/node_modules/
+.env
+*.log
+
+# Firebase key
+backend/serviceAccountKey.json
+
+# Build files
+real-estate-landing-react/dist/
+real-estate-landing-react/build/
+
+# OS & Editor files
+.DS_Store
+.vscode/

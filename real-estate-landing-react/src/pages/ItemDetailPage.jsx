@@ -25,7 +25,7 @@ export default function PropertyDetailPage() {
           <Header toggleMenu={toggleMenu} />
           <SideMenu open={menuOpen} toggleMenu={toggleMenu} />
           <main className="pt-24 container mx-auto px-4 pb-12">
-    <div className="font-[Prompt] p-4 max-w-7xl mx-auto">      
+    <div className="font-[Prompt] max-w-7xl mx-auto">      
       <div className="flex flex-col lg:flex-row gap-6">
         <div className="w-full lg:w-[70%]">
           <div className="mb-6">
