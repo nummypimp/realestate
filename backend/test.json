@@ -1,0 +1,53 @@
+[
+    {
+    "CONDO_ID": "34711",
+    "CONDO_NAME": "เย็นสบายดี คอนโด ปัตตานี",
+    "CHANGWAT_CODE": "94",
+    "CHANGWAT_NAME": "ปัตตานี",
+    "AMPHUR_CODE": "1",
+    "AMPHUR_NAME": "เมืองปัตตานี",
+    "TUMBON_CODE": "1",
+    "TUMBON_NAME": "สะบารัง"
+  },
+  {
+    "CONDO_ID": "34713",
+    "CONDO_NAME": "สะบารัง คอนโดเทล",
+    "CHANGWAT_CODE": "94",
+    "CHANGWAT_NAME": "ปัตตานี",
+    "AMPHUR_CODE": "1",
+    "AMPHUR_NAME": "เมืองปัตตานี",
+    "TUMBON_CODE": "10",
+    "TUMBON_NAME": "รูสะมิแล"
+  },
+  {
+    "CONDO_ID": "34712",
+    "CONDO_NAME": "รูสะมิแล คอนโดเทล",
+    "CHANGWAT_CODE": "94",
+    "CHANGWAT_NAME": "ปัตตานี",
+    "AMPHUR_CODE": "1",
+    "AMPHUR_NAME": "เมืองปัตตานี",
+    "TUMBON_CODE": "10",
+    "TUMBON_NAME": "รูสะมิแล"
+  },
+  {
+    "CONDO_ID": "41825",
+    "CONDO_NAME": "เอ พี ไอ แกรนด์คอนโดมิเนียม",
+    "CHANGWAT_CODE": "95",
+    "CHANGWAT_NAME": "ยะลา",
+    "AMPHUR_CODE": "1",
+    "AMPHUR_NAME": "เมืองยะลา",
+    "TUMBON_CODE": "NULL",
+    "TUMBON_NAME": "NULL"
+  },
+  {
+    "CONDO_ID": "34714",
+    "CONDO_NAME": "เอ.พี.ไอ. คอนโดมิเนียม",
+    "CHANGWAT_CODE": "95",
+    "CHANGWAT_NAME": "ยะลา",
+    "AMPHUR_CODE": "1",
+    "AMPHUR_NAME": "เมืองยะลา",
+    "TUMBON_CODE": "1",
+    "TUMBON_NAME": "สะเตง"
+  }
+
+]

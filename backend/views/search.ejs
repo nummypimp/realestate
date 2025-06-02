@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ค้นหาวิดีโอ TikTok ด้วย Keyword</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f3f4f6;
+      padding: 22px;
+      margin: 0;
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 1.2em;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    form {
+      margin-bottom: 20px;
+      max-width: 500px;
+      width: 100%;
+    }
+    input[type="text"] {
+      width: 100%;
+      max-width: 400px;
+      padding: 11px;
+      border-radius: 7px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      font-size: 1em;
+      margin-bottom: 10px;
+      display: block;
+    }
+    button {
+      padding: 11px 22px;
+      border-radius: 7px;
+      border: none;
+      background: #24c486;
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.18s;
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 10px;
+      display: block;
+    }
+    button:hover { background: #0ea16a; }
+    .error {
+      color: #e30c3d;
+      margin-bottom: 14px;
+      font-size: 1em;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .card {
+      background: #fff;
+      padding: 12px 10px 14px 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px #0001;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      height: 100%;
+    }
+.card img {
+  display: block;
+  width: 100%;
+  max-width: 100px;
+  height: 220px; /* หรือกำหนดตามขนาดที่ต้องการ */
+  object-fit: cover; /* รูปไม่บีบ ไม่ยืด เก็บสัดส่วน */
+  border-radius: 7px;
+  background: #eee;
+  margin-bottom: 10px;
+}
+    .card strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.05em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+   .card-details {
+  word-break: break-word;
+  margin-bottom: 5px;
+  color: #444;
+  font-size: 0.97em;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* ปรับเป็น 2 หรือ 3 ได้ */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+    .card a.card-link {
+      color: #2563eb;
+      text-decoration: none;
+      font-size: 1em;
+      margin-top: 6px;
+      border: 1px solid #24c486;
+      border-radius: 6px;
+      padding: 8px 0;
+      display: block;
+      text-align: center;
+      background: #f5fff7;
+      transition: background 0.18s, border 0.18s;
+    }
+    .card a.card-link:hover {
+      background: #24c486;
+      color: #fff;
+      border-color: #0ea16a;
+    }
+    @media (max-width: 1020px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 700px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+      body { padding: 6px; }
+      input[type="text"], button { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <h1>ค้นหาวิดีโอ TikTok จากคีย์เวิร์ด</h1>
+  <form method="POST" action="/search">
+    <input type="text" name="keyword" placeholder="เช่น แมวเต้น, เพลงฮิต" value="<%= keyword %>" required>
+    <button type="submit">ค้นหา</button>
+  </form>
+  <% if (error) { %>
+    <div class="error"><%= error %></div>
+  <% } %>
+  <% if (results) { %>
+    <h2 style="font-size:1.05em;margin-bottom:14px;">ผลการค้นหา</h2>
+    <div class="grid-container">
+    <% results.forEach(function(clip) { %>
+      <div class="card">
+        
+  <video src="<%= clip.play %>" controls
+    style="width:100%;border-radius:7px;background:#eee;margin-bottom:10px;object-fit:contain;max-height:320px;"
+    preload="none"
+    poster="<%= clip.cover %>"></video>
+        <div class="card-details"><%= clip.title %></div>
+
+        <a class="card-link" href="<%= clip.play %>" target="_blank">ดูคลิป TikTok</a>
+      </div>
+    <% }); %>
+    </div>
+  <% } %>
+  <p style="margin-top:28px;"><a href="/">กลับหน้าโหลดคลิป</a></p>
+</body>
+</html>
